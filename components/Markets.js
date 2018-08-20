@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 export default class Markets extends Component {
   constructor(props) {
@@ -27,10 +27,11 @@ getMarkets = () => {
         <View>
         <View style={styles.container}>
             <Text style={styles.upcoming}>Upcoming Markets</Text>
-            {this.state.markets.map(market => (
+            {this.state.markets.slice(0, 5).map(market => (
                 <View style={styles.market}><Text>{market.marketName}</Text></View>
             ))}
         </View>
+      <Button title="See All Markets"/>
       </View>
     );
   }

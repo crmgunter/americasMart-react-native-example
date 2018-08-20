@@ -10,6 +10,10 @@ import {
 import UpcomingMarket from "./components/UpcomingMarket";
 import Markets from './components/Markets'
 import Events from './components/Events'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+
 export default class App extends Component {
   render() {
     const resizeMode = "cover";
@@ -23,12 +27,14 @@ export default class App extends Component {
           }}
           style={styles.container}
         >
+        <Header />
           <View style={styles.inner}>
             <Text style={styles.welcome}>Welcome to AmericasMart</Text>
             <UpcomingMarket /> 
             <Events />
             <Markets />
           </View>
+          <Footer />
         </ImageBackground>
         </ScrollView>
       </View>
@@ -48,7 +54,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   welcome: {
-    marginTop: 80,
+    marginTop: 60,
+    marginBottom: 60,
     fontSize: 40,
     textAlign: "center",
     margin: 10,
