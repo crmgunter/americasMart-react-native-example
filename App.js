@@ -8,9 +8,8 @@ import {
   ScrollView
 } from "react-native";
 import UpcomingMarket from "./components/UpcomingMarket";
-// import MoreButtons from "./components/MoreButtons";
 import Markets from './components/Markets'
-
+import Events from './components/Events'
 export default class App extends Component {
   render() {
     const resizeMode = "cover";
@@ -27,8 +26,8 @@ export default class App extends Component {
           <View style={styles.inner}>
             <Text style={styles.welcome}>Welcome to AmericasMart</Text>
             <UpcomingMarket /> 
+            <Events />
             <Markets />
-            {/* <MoreButtons/> */}
           </View>
         </ImageBackground>
         </ScrollView>

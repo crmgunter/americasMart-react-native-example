@@ -26,6 +26,7 @@ getMarkets = () => {
     return (
         <View>
         <View style={styles.container}>
+            <Text style={styles.upcoming}>Upcoming Markets</Text>
             {this.state.markets.map(market => (
                 <View style={styles.market}><Text>{market.marketName}</Text></View>
             ))}
@@ -50,7 +51,11 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         height: 40,
         color: 'red'
-  
+    },
+    upcoming: {
+      fontWeight: "bold",
+      paddingTop: 10,
+      paddingLeft: 10
     }
   });
   
